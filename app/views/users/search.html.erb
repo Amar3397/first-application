@@ -1,0 +1,10 @@
+<h1>search Result </h1>
+<%@users.each do |user|%>
+<h1><%=user.first_name%> <%==user.last_name%></h1>
+<h2><%=user.email%></h2>
+<h2><%=user.mobile_no%></h2>
+<h2><%=user.date_of_birth%></h2>
+<h2><%=user.address%></h2>
+<h2><%=user.pincode%></h2>
+
+<%end%>

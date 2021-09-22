@@ -1,0 +1,47 @@
+
+<h1>List of all Users</h1>
+
+<form action="/search">
+	<input name="var" type="search" >
+	<button type="submit"> search_by_email</button>
+</form></br>
+<form action="/find">
+	<input name="var2" type="search">
+	<button type="submit">search_by_pincode</button>
+</form></br>
+
+<table >
+
+	<thead>
+		<th> first_name </th>
+		<th> last_name </th>
+		<th> email </th>
+		<th> mobile_no </th>
+		<th> date_of_birth </th>
+		<th> address </th>
+		<th> pincode </th>
+		<th> operation </th>
+	
+	</thead>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.first_name %> </td>
+			
+			<td><%= user.last_name %></td>
+			<td><%= user.email %> </td>
+			<td><%= user.mobile_no %> </td>
+			<td><%= user.date_of_birth %> </td>
+			<td><%= user.address %> </td>
+			<td><%= user.pincode %> </td>
+			<td>
+				<%= link_to "Create User", new_user_path %>
+				<%= link_to "Edit", edit_user_path(user) %>
+				<%= link_to "Delete",user,method: :delete,data:{ confirm: "Are you sure want to Delete "} %>
+				
+				
+			</td>
+		</tr>
+		<%end%>
+
+	</table>
+

@@ -1,0 +1,44 @@
+<%= form_with model: @user do |f| %>
+  <div>
+    <tr>
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+</tr>
+
+  <div class>
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div>
+    <%= f.label :email %><br>
+    <%= f.text_field :email%>
+  </div>
+
+  <div>
+    <%= f.label :mobile_no %><br>
+    <%= f.number_field :mobile_no %>
+  </div>
+
+  <div>
+    <%= f.label :date_of_birth %><br>
+    <%= f.text_field :date_of_birth %>
+  </div>
+
+  <div>
+    <%= f.label :address %><br>
+    <%= f.text_field :address%>
+  </div>
+
+  <div>
+    <%= f.label :pincode %><br>
+    <%= f.number_field :pincode %>
+  </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
